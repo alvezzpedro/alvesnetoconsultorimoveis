@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Alves Neto — Identidade Visual</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --navy:      #1B2A4A;
+    --gold:      #C4A265;
+    --offwhite:  #F7F3EC;
+    --dark:      #1C1C1C;
+    --gray:      #6B6B6B;
+    --white:     #FFFFFF;
+  }
+
+  body {
+    background: var(--offwhite);
+    color: var(--dark);
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    line-height: 1.6;
+  }
+
+  /* HEADER */
+  .header {
+    background: var(--navy);
+    padding: 72px 60px;
+    text-align: center;
+  }
+  .header-label {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    font-size: 11px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 24px;
+  }
+  .logo-wordmark {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    font-size: 38px;
+    letter-spacing: 8px;
+    color: var(--offwhite);
+    text-transform: uppercase;
+    line-height: 1;
+  }
+  .logo-divider {
+    width: 40px;
+    height: 1px;
+    background: var(--gold);
+    margin: 18px auto;
+  }
+  .logo-sub {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    font-size: 12px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: var(--offwhite);
+    opacity: 0.7;
+  }
+
+  /* SECTIONS */
+  .section {
+    padding: 64px 60px;
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+  .section-label {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    font-size: 10px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 32px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  .section-label::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: #E0D9CF;
+  }
+
+  /* CORES */
+  .colors {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 16px;
+  }
+  .color-item { display: flex; flex-direction: column; gap: 10px; }
+  .color-swatch {
+    height: 80px;
+    border-radius: 0;
+  }
+  .color-swatch.bordered { border: 1px solid #E0D9CF; }
+  .color-name {
+    font-size: 11px;
+    font-weight: 500;
+    color: var(--dark);
+    letter-spacing: 0.5px;
+  }
+  .color-hex {
+    font-size: 11px;
+    color: var(--gray);
+    font-weight: 300;
+  }
+
+  /* TIPOGRAFIA */
+  .type-block { margin-bottom: 40px; }
+  .type-label {
+    font-size: 10px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--gray);
+    margin-bottom: 8px;
+    font-weight: 300;
+  }
+  .type-sample-1 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    font-size: 48px;
+    color: var(--navy);
+    line-height: 1.1;
+  }
+  .type-sample-2 {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-weight: 400;
+    font-size: 28px;
+    color: var(--gray);
+    line-height: 1.3;
+  }
+  .type-sample-3 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    color: var(--dark);
+    line-height: 1.7;
+    max-width: 560px;
+  }
+  .type-sample-4 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    font-size: 11px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: var(--gold);
+  }
+
+  /* APLICAÇÕES */
+  .apps {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+  }
+
+  /* Card claro */
+  .card-light {
+    background: var(--white);
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  .card-light .tag {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    font-size: 10px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--gold);
+  }
+  .card-light .title {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    font-size: 26px;
+    color: var(--navy);
+    line-height: 1.2;
+  }
+  .card-light .divider {
+    width: 40px;
+    height: 1px;
+    background: var(--gold);
+  }
+  .card-light .body {
+    font-size: 14px;
+    color: var(--gray);
+    line-height: 1.7;
+  }
+  .card-light .cta {
+    display: inline-block;
+    margin-top: 8px;
+    padding: 12px 24px;
+    background: var(--navy);
+    color: var(--white);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    text-decoration: none;
+    width: fit-content;
+  }
+
+  /* Card escuro */
+  .card-dark {
+    background: var(--navy);
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  .card-dark .tag {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    font-size: 10px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--gold);
+  }
+  .card-dark .title {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    font-size: 26px;
+    color: var(--offwhite);
+    line-height: 1.2;
+  }
+  .card-dark .divider {
+    width: 40px;
+    height: 1px;
+    background: var(--gold);
+  }
+  .card-dark .body {
+    font-size: 14px;
+    color: rgba(247,243,236,0.6);
+    line-height: 1.7;
+  }
+  .card-dark .cta {
+    display: inline-block;
+    margin-top: 8px;
+    padding: 12px 24px;
+    border: 1px solid var(--gold);
+    color: var(--gold);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    text-decoration: none;
+    width: fit-content;
+  }
+
+  /* Bio Instagram mockup */
+  .insta-mock {
+    background: var(--white);
+    padding: 32px 40px;
+    border-left: 3px solid var(--gold);
+    grid-column: span 2;
+  }
+  .insta-mock .handle {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--navy);
+    margin-bottom: 4px;
+  }
+  .insta-mock .name {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    font-size: 18px;
+    color: var(--dark);
+    margin-bottom: 12px;
+  }
+  .insta-mock .bio {
+    font-size: 13px;
+    color: var(--dark);
+    line-height: 1.6;
+  }
+
+  /* Logo variações */
+  .logos {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0;
+  }
+  .logo-light {
+    background: var(--offwhite);
+    padding: 56px 40px;
+    text-align: center;
+    border: 1px solid #E0D9CF;
+  }
+  .logo-dark-bg {
+    background: var(--navy);
+    padding: 56px 40px;
+    text-align: center;
+  }
+  .logo-wm-dark {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    font-size: 36px;
+    letter-spacing: 8px;
+    color: var(--navy);
+    text-transform: uppercase;
+    line-height: 1;
+  }
+  .logo-wm-light {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    font-size: 36px;
+    letter-spacing: 8px;
+    color: var(--offwhite);
+    text-transform: uppercase;
+    line-height: 1;
+  }
+  .logo-d { width: 36px; height: 1px; background: var(--gold); margin: 14px auto; }
+  .logo-sub-dark {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    font-size: 10px;
+    letter-spacing: 3.5px;
+    text-transform: uppercase;
+    color: var(--navy);
+    opacity: 0.6;
+  }
+  .logo-sub-light {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    font-size: 10px;
+    letter-spacing: 3.5px;
+    text-transform: uppercase;
+    color: var(--offwhite);
+    opacity: 0.6;
+  }
+
+  /* Footer */
+  .footer {
+    background: var(--dark);
+    padding: 32px 60px;
+    text-align: center;
+  }
+  .footer p {
+    font-size: 11px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.3);
+    font-weight: 300;
+  }
+
+  @media (max-width: 720px) {
+    .colors { grid-template-columns: repeat(3, 1fr); }
+    .apps, .logos { grid-template-columns: 1fr; }
+    .insta-mock { grid-column: span 1; }
+    .section { padding: 40px 24px; }
+    .header { padding: 48px 24px; }
+    .logo-wordmark { font-size: 32px; letter-spacing: 6px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- HEADER / LOGO PRINCIPAL -->
+<div class="header">
+  <div class="header-label">Proposta de Identidade Visual</div>
+  <div class="logo-wordmark">Almerindo Alves Neto</div>
+  <div class="logo-divider"></div>
+  <div class="logo-sub">Consultoria Imobiliária</div>
+</div>
+
+<!-- PALETA -->
+<div class="section">
+  <div class="section-label">Paleta de cores</div>
+  <div class="colors">
+    <div class="color-item">
+      <div class="color-swatch" style="background:#1B2A4A;"></div>
+      <div class="color-name">Azul Marinho</div>
+      <div class="color-hex">#1B2A4A</div>
+    </div>
+    <div class="color-item">
+      <div class="color-swatch" style="background:#C4A265;"></div>
+      <div class="color-name">Champanhe</div>
+      <div class="color-hex">#C4A265</div>
+    </div>
+    <div class="color-item">
+      <div class="color-swatch" style="background:#F7F3EC; border:1px solid #E0D9CF;"></div>
+      <div class="color-name">Off-white</div>
+      <div class="color-hex">#F7F3EC</div>
+    </div>
+    <div class="color-item">
+      <div class="color-swatch" style="background:#1C1C1C;"></div>
+      <div class="color-name">Grafite</div>
+      <div class="color-hex">#1C1C1C</div>
+    </div>
+    <div class="color-item">
+      <div class="color-swatch" style="background:#6B6B6B;"></div>
+      <div class="color-name">Cinza Médio</div>
+      <div class="color-hex">#6B6B6B</div>
+    </div>
+    <div class="color-item">
+      <div class="color-swatch" style="background:#FFFFFF; border:1px solid #E0D9CF;"></div>
+      <div class="color-name">Branco</div>
+      <div class="color-hex">#FFFFFF</div>
+    </div>
+  </div>
+</div>
+
+<!-- LOGO VARIAÇÕES -->
+<div class="section" style="padding-top:0;">
+  <div class="section-label">Logo — variações</div>
+  <div class="logos">
+    <div class="logo-light">
+      <div class="logo-wm-dark">Alves Neto</div>
+      <div class="logo-d"></div>
+      <div class="logo-sub-dark">Consultoria Imobiliária</div>
+    </div>
+    <div class="logo-dark-bg">
+      <div class="logo-wm-light">Alves Neto</div>
+      <div class="logo-d"></div>
+      <div class="logo-sub-light">Consultoria Imobiliária</div>
+    </div>
+  </div>
+</div>
+
+<!-- TIPOGRAFIA -->
+<div class="section" style="padding-top:0;">
+  <div class="section-label">Tipografia</div>
+  <div class="type-block">
+    <div class="type-label">Títulos — Playfair Display Bold</div>
+    <div class="type-sample-1">Imóveis que valem o seu futuro.</div>
+  </div>
+  <div class="type-block">
+    <div class="type-label">Subtítulos — Playfair Display Italic</div>
+    <div class="type-sample-2">Especialista em Médio e Alto Padrão em Goiânia</div>
+  </div>
+  <div class="type-block">
+    <div class="type-label">Corpo — Montserrat Regular</div>
+    <div class="type-sample-3">Com mais de uma década de atuação no mercado imobiliário de Goiânia, Almerindo Alves Neto oferece curadoria personalizada para quem busca investir com segurança e conquistar o padrão de vida que merece.</div>
+  </div>
+  <div class="type-block">
+    <div class="type-label">Label / Versalete — Montserrat Light</div>
+    <div class="type-sample-4">CRECI-GO 40.410 · Goiânia, Goiás</div>
+  </div>
+</div>
+
+<!-- APLICAÇÕES -->
+<div class="section" style="padding-top:0;">
+  <div class="section-label">Aplicações</div>
+  <div class="apps">
+
+    <div class="card-light">
+      <div class="tag">Oportunidade Exclusiva</div>
+      <div class="title">Lançamento no coração do Setor Bueno</div>
+      <div class="divider"></div>
+      <div class="body">Apartamentos de 2 e 3 suítes com acabamento alto padrão. Entrega prevista para 2026. Vagas garantidas para quem se cadastrar agora.</div>
+      <a class="cta" href="#">Quero saber mais</a>
+    </div>
+
+    <div class="card-dark">
+      <div class="tag">100% Vendido em 3 Horas</div>
+      <div class="title">Quando o certo aparece, quem espera fica de fora.</div>
+      <div class="divider"></div>
+      <div class="body">Acesso antecipado a lançamentos exclusivos. Cadastre-se e receba as melhores oportunidades antes de todo mundo.</div>
+      <a class="cta" href="#">Garantir acesso</a>
+    </div>
+
+    <div class="insta-mock">
+      <div class="tag" style="font-family:'Montserrat',sans-serif;font-weight:300;font-size:10px;letter-spacing:3px;text-transform:uppercase;color:#C4A265;margin-bottom:12px;">Sugestão — Bio do Instagram</div>
+      <div class="handle">@alvesneto.imoveis</div>
+      <div class="name">Alves Neto | Consultoria Imobiliária</div>
+      <div class="bio">
+        Médio/Alto Padrão · Goiânia, GO<br>
+        CRECI-GO 40.410 · @aevo.imobiliaria<br>
+        Acesse as oportunidades antes do lançamento ↓
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<div class="footer">
+  <p>Alves Neto Consultoria Imobiliária · Proposta de identidade visual · 2026</p>
+</div>
+
+</body>
+</html>

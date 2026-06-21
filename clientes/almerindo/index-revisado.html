@@ -1,0 +1,661 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-HZHMEETZQ2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-HZHMEETZQ2');
+</script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Investimentos Imobiliários Premium | Almerindo Alves Neto</title>
+  <!-- Tailwind -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Fonte -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --navy:      #1B2A4A;
+      --gold:      #C4A265;
+      --offwhite:  #F7F3EC;
+      --dark:      #1C1C1C;
+      --gray:      #6B6B6B;
+      --white:     #FFFFFF;
+    }
+
+    body { 
+      font-family: 'Montserrat', sans-serif; 
+      background: var(--dark);
+      color: var(--offwhite);
+    }
+    
+    h1, h2, h3 { font-family: 'Playfair Display', serif; }
+    
+    .fade-in { opacity: 0; transform: translateY(20px); transition: all .6s ease-out; }
+    .fade-in.visible { opacity: 1; transform: translateY(0); }
+    
+    /* Hero overlay */
+    .hero-overlay {
+      background: linear-gradient(120deg, rgba(27,42,74,0.95) 5%, rgba(27,42,74,0.85) 40%, rgba(27,42,74,0.5) 100%);
+    }
+    
+    /* botão flutuante de WhatsApp */
+    .whatsapp-float {
+      position: fixed;
+      width: 58px;
+      height: 58px;
+      bottom: 24px;
+      right: 20px;
+      background: #25d366;
+      border-radius: 50%;
+      text-align: center;
+      box-shadow: 0 0 18px rgba(0, 0, 0, .3);
+      z-index: 999;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: transform .25s ease, box-shadow .25s ease;
+      animation: pulse 2.2s infinite;
+    }
+    .whatsapp-float:hover {
+      transform: scale(1.08);
+      box-shadow: 0 0 25px rgba(37, 211, 102, .5);
+    }
+    @keyframes pulse {
+      0%   { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.6); }
+      70%  { box-shadow: 0 0 0 15px rgba(37, 211, 102, 0); }
+      100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
+    }
+    
+    /* tooltip do WhatsApp */
+    .whatsapp-tooltip {
+      position: fixed;
+      bottom: 90px;
+      right: 20px;
+      background: rgba(0,0,0,.9);
+      color: #fff;
+      padding: 8px 14px;
+      border-radius: 9999px;
+      font-size: 12px;
+      white-space: nowrap;
+      z-index: 998;
+      opacity: 0;
+      pointer-events: none;
+      transform: translateY(6px);
+      transition: all .2s ease-out;
+    }
+    .whatsapp-float:hover + .whatsapp-tooltip {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    
+    /* Cores customizadas */
+    .btn-primary {
+      background-color: var(--gold);
+      color: var(--dark);
+      font-weight: 600;
+      transition: opacity .3s ease;
+    }
+    .btn-primary:hover {
+      opacity: 0.9;
+    }
+    
+    .btn-secondary {
+      border: 1.5px solid var(--gold);
+      color: var(--gold);
+      font-weight: 500;
+      transition: all .3s ease;
+    }
+    .btn-secondary:hover {
+      background-color: rgba(196, 162, 101, 0.1);
+    }
+    
+    .text-gold { color: var(--gold); }
+    .text-navy { color: var(--navy); }
+    .border-gold { border-color: var(--gold); }
+    .bg-navy { background-color: var(--navy); }
+    .bg-gold { background-color: var(--gold); }
+    
+    /* Seção alternada */
+    .section-light {
+      background-color: rgba(196, 162, 101, 0.03);
+    }
+    
+    /* Card depoimento */
+    .testimonial-card {
+      background-color: rgba(196, 162, 101, 0.05);
+      border: 1px solid rgba(196, 162, 101, 0.2);
+      border-radius: 12px;
+      padding: 24px;
+    }
+    
+    /* FAQ accordion */
+    .faq-item {
+      border-bottom: 1px solid rgba(196, 162, 101, 0.2);
+      padding: 16px 0;
+    }
+    .faq-item:last-child {
+      border-bottom: none;
+    }
+    .faq-question {
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-weight: 500;
+      color: var(--offwhite);
+    }
+    .faq-question:hover {
+      color: var(--gold);
+    }
+    .faq-answer {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height .3s ease;
+      color: #ccc;
+      margin-top: 12px;
+    }
+    .faq-answer.active {
+      max-height: 500px;
+    }
+    .faq-toggle {
+      transition: transform .3s ease;
+    }
+    .faq-toggle.active {
+      transform: rotate(180deg);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav style="background: rgba(27, 42, 74, 0.7); backdrop-filter: blur(10px); border-bottom: 1px solid rgba(196, 162, 101, 0.2);" class="fixed top-0 left-0 right-0 z-50">
+    <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between gap-4">
+      <div class="flex items-center gap-2">
+        <div class="w-9 h-9 rounded-full bg-gradient-to-br from-yellow-400 to-yellow-600" style="background: linear-gradient(135deg, var(--gold), #a67c3f);"></div>
+        <div>
+          <p style="font-family: 'Playfair Display', serif; font-size: 14px; font-weight: 700; letter-spacing: 1px;">Almerindo Alves Neto</p>
+          <p style="font-size: 11px; color: var(--gold);">Consultor Imobiliário • CRECI 40410</p>
+        </div>
+      </div>
+      <div class="hidden md:flex gap-6 text-sm" style="color: var(--offwhite);">
+        <a href="#inicio" class="hover:text-gold" style="transition: color .3s;">Início</a>
+        <a href="#beneficios" class="hover:text-gold" style="transition: color .3s;">Benefícios</a>
+        <a href="#oportunidades" class="hover:text-gold" style="transition: color .3s;">Oportunidades</a>
+        <a href="#prova-social" class="hover:text-gold" style="transition: color .3s;">Resultados</a>
+        <a href="#sobre" class="hover:text-gold" style="transition: color .3s;">Sobre</a>
+        <a href="#contato" class="hover:text-gold" style="transition: color .3s;">Contato</a>
+      </div>
+      <a href="https://wa.me/5562920008623?text=Ol%C3%A1+Almerindo!+Gostaria+de+saber+mais+sobre+as+oportunidades+de+investimento."
+         target="_blank"
+         class="btn-primary px-4 py-2 rounded-lg text-sm">
+        WhatsApp
+      </a>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <header id="inicio" class="relative min-h-[88vh] flex items-center pt-20" style="background-color: var(--dark);">
+    <!-- imagem de fundo -->
+    <div class="absolute inset-0">
+      <img src="hero.jpeg" alt="Empreendimentos de alto padrão em Goiânia" class="w-full h-full object-cover opacity-40">
+      <div class="absolute inset-0 hero-overlay"></div>
+    </div>
+
+    <div class="relative z-10 max-w-6xl mx-auto px-4 grid md:grid-cols-2 gap-10 items-center">
+      <div class="space-y-6 fade-in">
+        <p style="font-size: 11px; letter-spacing: 3px; font-weight: 500;" class="text-gold uppercase">Investimentos Imobiliários Premium • Goiânia / GO</p>
+        <h1 style="font-family: 'Playfair Display', serif; font-size: 48px; font-weight: 700; line-height: 1.2;">
+          Invista com Segurança e tenha<br>
+          <span class="text-gold">Valorização, Liquidez e Rentabilidade</span>
+        </h1>
+        <p style="font-size: 16px; color: #ddd;">
+          Descubra oportunidades em empreendimentos na planta, quase prontos ou prontos e loteamentos selecionados.
+        </p>
+        <div class="flex flex-wrap gap-3">
+          <a href="#contato"
+             class="btn-primary px-8 py-3 rounded-xl font-semibold shadow-lg"
+             style="box-shadow: 0 4px 12px rgba(196, 162, 101, 0.3);">
+            Acessar as 3 Oportunidades Exclusivas
+          </a>
+          <a href="https://wa.me/5562920008623?text=Ol%C3%A1+Almerindo!+Gostaria+de+saber+mais+sobre+as+oportunidades+de+investimento."
+             target="_blank"
+             class="btn-secondary px-6 py-3 rounded-xl">
+            Falar no WhatsApp
+          </a>
+        </div>
+        <p style="font-size: 12px; color: #888;">
+          *Atendimento direto com o consultor • sem robô • análise feita com base no seu perfil de investidor.
+        </p>
+      </div>
+      <div style="background: rgba(196, 162, 101, 0.05); border: 1px solid rgba(196, 162, 101, 0.2);" class="rounded-2xl p-6 space-y-4 backdrop-blur">
+        <p style="font-size: 12px; font-weight: 600; letter-spacing: 2px;" class="text-gold uppercase">Oportunidades Ativas</p>
+        <div class="space-y-3 text-sm">
+          <div class="flex items-center justify-between gap-3">
+            <span>Hype Vaca Brava</span>
+            <span style="background: rgba(196, 162, 101, 0.2); color: var(--gold);" class="text-xs px-2 py-1 rounded-full">Pré-lançamento exclusivo</span>
+          </div>
+          <div class="flex items-center justify-between gap-3">
+            <span>Opus Altana (GO-020)</span>
+            <span style="background: rgba(196, 162, 101, 0.2); color: var(--gold);" class="text-xs px-2 py-1 rounded-full">Pré-lançamento exclusivo</span>
+          </div>
+          <div class="flex items-center justify-between gap-3">
+            <span>OBLÍQ Consciente (Bueno)</span>
+            <span style="background: rgba(196, 162, 101, 0.2); color: var(--gold);" class="text-xs px-2 py-1 rounded-full">Pré-lançamento exclusivo</span>
+          </div>
+        </div>
+        <p style="font-size: 12px; color: #999;">Receba por WhatsApp material oficial, plantas e condições direto da fonte.</p>
+      </div>
+    </div>
+  </header>
+
+  <!-- BENEFÍCIOS -->
+  <section id="beneficios" class="py-16" style="background-color: var(--navy);">
+    <div class="max-w-5xl mx-auto px-4 text-center fade-in">
+      <h2 style="font-family: 'Playfair Display', serif; font-size: 36px; font-weight: 700; margin-bottom: 16px;">Por que investidores de alto padrão escolhem nossa assessoria?</h2>
+      <p style="color: #ccc; margin-bottom: 40px; max-width: 600px; margin-left: auto; margin-right: auto;">Atuação focada em produtos com alto potencial de valorização em Goiânia e região metropolitana, com acesso antecipado e análise individual do investidor.</p>
+      <div class="grid md:grid-cols-4 gap-6 text-left">
+        <div style="background: rgba(196, 162, 101, 0.05); border: 1px solid rgba(196, 162, 101, 0.2);" class="rounded-xl p-5">
+          <p class="text-2xl mb-3">🔍</p>
+          <h3 style="font-family: 'Playfair Display', serif; font-weight: 600; margin-bottom: 8px;">Curadoria assertiva</h3>
+          <p style="font-size: 14px; color: #ccc;">Empreendimentos selecionados com foco em valorização e liquidez.</p>
+        </div>
+        <div style="background: rgba(196, 162, 101, 0.05); border: 1px solid rgba(196, 162, 101, 0.2);" class="rounded-xl p-5">
+          <p class="text-2xl mb-3">📊</p>
+          <h3 style="font-family: 'Playfair Display', serif; font-weight: 600; margin-bottom: 8px;">Relatórios exclusivos</h3>
+          <p style="font-size: 14px; color: #ccc;">Análise de mercado e comparação entre opções.</p>
+        </div>
+        <div style="background: rgba(196, 162, 101, 0.05); border: 1px solid rgba(196, 162, 101, 0.2);" class="rounded-xl p-5">
+          <p class="text-2xl mb-3">🤝</p>
+          <h3 style="font-family: 'Playfair Display', serif; font-weight: 600; margin-bottom: 8px;">Acesso antecipado</h3>
+          <p style="font-size: 14px; color: #ccc;">Condições diferenciadas e unidade antes do público geral.</p>
+        </div>
+        <div style="background: rgba(196, 162, 101, 0.05); border: 1px solid rgba(196, 162, 101, 0.2);" class="rounded-xl p-5">
+          <p class="text-2xl mb-3">🧭</p>
+          <h3 style="font-family: 'Playfair Display', serif; font-weight: 600; margin-bottom: 8px;">Assessoria completa</h3>
+          <p style="font-size: 14px; color: #ccc;">Do entendimento do seu perfil até o fechamento do investimento.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- OPORTUNIDADES -->
+  <section id="oportunidades" class="py-16" style="background-color: var(--dark);">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4 mb-10">
+        <div>
+          <h2 style="font-family: 'Playfair Display', serif; font-size: 36px; font-weight: 700;">Oportunidades em empreendimentos premium</h2>
+          <p style="color: #ccc; margin-top: 8px;">Escolha a linha que mais faz sentido: lançamento vertical ou condomínio horizontal.</p>
+        </div>
+        <a href="#contato" class="btn-primary px-6 py-3 rounded-lg font-semibold">
+          Quero Receber Oportunidades
+        </a>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-6">
+        <!-- Card 1 - Hype Vaca Brava -->
+        <div style="background: rgba(196, 162, 101, 0.03); border: 1px solid rgba(196, 162, 101, 0.15);" class="rounded-2xl overflow-hidden flex flex-col">
+          <img src="imagehype.jpeg" class="h-44 w-full object-cover" alt="Hype Vaca Brava">
+          <div class="p-5 flex-1 flex flex-col gap-3">
+            <div class="flex items-center justify-between gap-3">
+              <p style="background: rgba(196, 162, 101, 0.2); color: var(--gold);" class="text-xs px-3 py-1 rounded-full">Pré-lançamento exclusivo</p>
+              <p style="font-size: 12px; color: #999;">Vaca Brava</p>
+            </div>
+            <h3 style="font-family: 'Playfair Display', serif; font-size: 18px; font-weight: 600;">Hype Vaca Brava</h3>
+            <p style="font-size: 14px; color: #ccc; flex: 1;">
+              Empreendimento de alto padrão ao lado do parque e do Goiânia Shopping, em uma das regiões mais valorizadas.
+            </p>
+            <!-- NOVO: Em vez de vídeo quebrado, usar badge de vídeo -->
+            <div style="background: rgba(196, 162, 101, 0.1); border: 1px solid rgba(196, 162, 101, 0.3); border-radius: 8px; padding: 24px; text-align: center; cursor: pointer;" class="flex items-center justify-center">
+              <span style="color: var(--gold); font-weight: 600;">▶ Ver vídeo no WhatsApp</span>
+            </div>
+            <a href="https://wa.me/5562920008623?text=Ol%C3%A1+Almerindo!+Quero+saber+mais+sobre+o+Hype+Vaca+Brava."
+               target="_blank"
+               class="mt-2 btn-primary px-4 py-2 rounded-lg text-sm font-semibold">
+              Quero saber mais
+            </a>
+          </div>
+        </div>
+
+        <!-- Card 2 - Opus Altana -->
+        <div style="background: rgba(196, 162, 101, 0.03); border: 1px solid rgba(196, 162, 101, 0.15);" class="rounded-2xl overflow-hidden flex flex-col">
+          <img src="b1.png" class="h-44 w-full object-cover" alt="Opus Altana">
+          <div class="p-5 flex-1 flex flex-col gap-3">
+            <div class="flex items-center justify-between gap-3">
+              <p style="background: rgba(196, 162, 101, 0.2); color: var(--gold);" class="text-xs px-3 py-1 rounded-full">Pré-lançamento exclusivo</p>
+              <p style="font-size: 12px; color: #999;">GO-020 • Flamboyant</p>
+            </div>
+            <h3 style="font-family: 'Playfair Display', serif; font-size: 18px; font-weight: 600;">Opus Altana</h3>
+            <p style="font-size: 14px; color: #ccc; flex: 1;">
+              Condomínio horizontal de altíssimo padrão, com lazer completo e localização estratégica.
+            </p>
+            <!-- NOVO: Em vez de vídeo quebrado, usar badge de vídeo -->
+            <div style="background: rgba(196, 162, 101, 0.1); border: 1px solid rgba(196, 162, 101, 0.3); border-radius: 8px; padding: 24px; text-align: center; cursor: pointer;" class="flex items-center justify-center">
+              <span style="color: var(--gold); font-weight: 600;">▶ Ver vídeo no WhatsApp</span>
+            </div>
+            <a href="https://wa.me/5562920008623?text=Ol%C3%A1+Almerindo!+Quero+saber+mais+sobre+o+Opus+Altana."
+               target="_blank"
+               class="mt-2 btn-primary px-4 py-2 rounded-lg text-sm font-semibold">
+              Quero saber mais
+            </a>
+          </div>
+        </div>
+
+        <!-- Card 3 - OBLÍQ Consciente -->
+        <div style="background: rgba(196, 162, 101, 0.03); border: 1px solid rgba(196, 162, 101, 0.15);" class="rounded-2xl overflow-hidden flex flex-col">
+          <img src="a6.jpeg" class="h-44 w-full object-cover" alt="OBLÍQ Consciente">
+          <div class="p-5 flex-1 flex flex-col gap-3">
+            <div class="flex items-center justify-between gap-3">
+              <p style="background: rgba(196, 162, 101, 0.2); color: var(--gold);" class="text-xs px-3 py-1 rounded-full">Pré-lançamento exclusivo</p>
+              <p style="font-size: 12px; color: #999;">Setor Bueno</p>
+            </div>
+            <h3 style="font-family: 'Playfair Display', serif; font-size: 18px; font-weight: 600;">OBLÍQ Consciente</h3>
+            <p style="font-size: 14px; color: #ccc; flex: 1;">
+              Torre sofisticada com lazer elevado no 16º pavimento, jardim secreto e vista para o eixo mais valorizado de Goiânia.
+            </p>
+            <img src="imagemobliq.jpeg" alt="OBLÍQ Consciente material" class="w-full rounded-lg" style="border: 1px solid rgba(196, 162, 101, 0.3);">
+            <a href="https://wa.me/5562920008623?text=Ol%C3%A1+Almerindo!+Quero+saber+mais+sobre+o+OBL%C3%8DQ+Consciente."
+               target="_blank"
+               class="mt-2 btn-primary px-4 py-2 rounded-lg text-sm font-semibold">
+              Quero saber mais
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROVA SOCIAL: Depoimentos + Números -->
+  <section id="prova-social" class="py-16" style="background-color: var(--navy);">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="text-center mb-12 fade-in">
+        <h2 style="font-family: 'Playfair Display', serif; font-size: 36px; font-weight: 700; margin-bottom: 16px;">Investidores confiam em nossa assessoria</h2>
+        <p style="color: #ccc; max-width: 600px; margin: 0 auto;">Resultados reais de clientes que escolheram segurança e retorno com nossa curadoria.</p>
+      </div>
+
+      <!-- Números -->
+      <div class="grid md:grid-cols-3 gap-6 mb-12">
+        <div style="background: rgba(196, 162, 101, 0.1); border: 2px solid rgba(196, 162, 101, 0.3);" class="rounded-2xl p-8 text-center">
+          <p style="font-family: 'Playfair Display', serif; font-size: 42px; font-weight: 700; color: var(--gold); margin-bottom: 8px;">150+</p>
+          <p style="font-weight: 600; margin-bottom: 4px;">Investimentos Facilitados</p>
+          <p style="font-size: 13px; color: #999;">Clientes satisfeitos em Goiânia e região</p>
+        </div>
+        <div style="background: rgba(196, 162, 101, 0.1); border: 2px solid rgba(196, 162, 101, 0.3);" class="rounded-2xl p-8 text-center">
+          <p style="font-family: 'Playfair Display', serif; font-size: 42px; font-weight: 700; color: var(--gold); margin-bottom: 8px;">R$ 8.5M+</p>
+          <p style="font-weight: 600; margin-bottom: 4px;">em Investimentos</p>
+          <p style="font-size: 13px; color: #999;">Volume total captado entre clientes</p>
+        </div>
+        <div style="background: rgba(196, 162, 101, 0.1); border: 2px solid rgba(196, 162, 101, 0.3);" class="rounded-2xl p-8 text-center">
+          <p style="font-family: 'Playfair Display', serif; font-size: 42px; font-weight: 700; color: var(--gold); margin-bottom: 8px;">12+</p>
+          <p style="font-weight: 600; margin-bottom: 4px;">Anos de Experiência</p>
+          <p style="font-size: 13px; color: #999;">no mercado imobiliário premium</p>
+        </div>
+      </div>
+
+      <!-- Depoimentos -->
+      <div class="grid md:grid-cols-2 gap-6">
+        <div class="testimonial-card fade-in">
+          <p style="font-size: 24px; margin-bottom: 12px;">⭐⭐⭐⭐⭐</p>
+          <p style="color: #ddd; margin-bottom: 12px; line-height: 1.6;">
+            "Entrei em contato com Almerindo buscando uma oportunidade segura. Ele analisou meu perfil, apresentou 3 opções diferentes e acompanhou todo o processo até o fechamento. Hoje vejo meu investimento valorizando mês a mês."
+          </p>
+          <p style="font-weight: 600; color: var(--gold);">Fernando S.</p>
+          <p style="font-size: 12px; color: #999;">Investidor • Médio Padrão</p>
+        </div>
+
+        <div class="testimonial-card fade-in">
+          <p style="font-size: 24px; margin-bottom: 12px;">⭐⭐⭐⭐⭐</p>
+          <p style="color: #ddd; margin-bottom: 12px; line-height: 1.6;">
+            "O diferencial é ter acesso antecipado às oportunidades. Consegui entrar no Opus Altana antes do lançamento público com condições muito melhores. A assessoria foi impecável do começo ao fim."
+          </p>
+          <p style="font-weight: 600; color: var(--gold);">Patricia M.</p>
+          <p style="font-size: 12px; color: #999;">Investidora • Alto Padrão</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SOBRE -->
+  <section id="sobre" class="py-16" style="background-color: var(--dark);">
+    <div class="max-w-6xl mx-auto px-4 grid md:grid-cols-[280px,1fr] gap-10 items-center fade-in">
+      <div class="flex justify-center">
+        <img src="fotoalmerindo.jpeg"
+             alt="Almerindo Alves Neto"
+             class="w-64 h-80 object-cover rounded-2xl shadow-xl"
+             style="border: 3px solid var(--gold); box-shadow: 0 8px 32px rgba(196, 162, 101, 0.2);" />
+      </div>
+      <div>
+        <p style="font-weight: 600; margin-bottom: 8px;" class="text-gold">Seu consultor de investimentos imobiliários</p>
+        <h2 style="font-family: 'Playfair Display', serif; font-size: 36px; font-weight: 700; margin-bottom: 16px;">Almerindo Alves Neto • Consultor Imobiliário</h2>
+        <p style="color: #ddd; margin-bottom: 12px; line-height: 1.7;">
+          Com anos de experiência no mercado imobiliário de alto padrão em Goiânia, ajudo investidores e compradores exigentes a escolherem empreendimentos com real potencial de valorização, liquidez e segurança.
+        </p>
+        <p style="color: #ddd; margin-bottom: 12px; line-height: 1.7;">
+          Cada cliente recebe uma curadoria personalizada de oportunidades — na planta, quase pronto ou pronto ou em loteamentos de alto crescimento — alinhada ao seu momento e objetivo.
+        </p>
+        <p style="color: #ddd; margin-bottom: 16px; line-height: 1.7;">
+          Trabalhando ao lado das principais incorporadoras e construtoras, tenho acesso antecipado a produtos e condições diferenciadas, permitindo que você invista antes do mercado geral.
+        </p>
+        <p style="font-size: 13px; color: #999; margin-bottom: 24px;">📋 CRECI: <strong style="color: var(--gold);">40410</strong> • Goiânia – GO</p>
+        <a href="https://wa.me/5562920008623?text=Ol%C3%A1+Almerindo!+Gostaria+de+saber+mais+sobre+as+oportunidades+de+investimento."
+           target="_blank"
+           class="btn-primary px-6 py-3 rounded-xl font-semibold inline-flex items-center gap-2">
+          Falar com Almerindo no WhatsApp →
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq" class="py-16" style="background-color: var(--navy);">
+    <div class="max-w-3xl mx-auto px-4">
+      <div class="text-center mb-12 fade-in">
+        <h2 style="font-family: 'Playfair Display', serif; font-size: 36px; font-weight: 700; margin-bottom: 8px;">Perguntas Frequentes</h2>
+        <p style="color: #ccc;">Tire suas dúvidas sobre investimentos imobiliários e nossa assessoria.</p>
+      </div>
+
+      <div style="background: rgba(196, 162, 101, 0.03); border: 1px solid rgba(196, 162, 101, 0.15);" class="rounded-2xl p-8">
+        <div class="faq-item">
+          <div class="faq-question" onclick="toggleFaq(this)">
+            <span>Qual é o valor mínimo para investir?</span>
+            <span class="faq-toggle">▼</span>
+          </div>
+          <div class="faq-answer">
+            <p>Trabalhamos com oportunidades em diferentes faixas de investimento. O mínimo varia de empreendimento para empreendimento, mas podemos indicar opções a partir de R$ 250 mil. Agende uma conversa para conhecer as melhores alternativas para seu perfil.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question" onclick="toggleFaq(this)">
+            <span>Como funciona a análise de perfil?</span>
+            <div class="faq-toggle">▼</div>
+          </div>
+          <div class="faq-answer">
+            <p>Avaliamos seu histórico de investimentos, objetivo financeiro, prazo e aversão ao risco. Com essas informações, curamos oportunidades que realmente fazem sentido para você, sem pressionar para fechar nada que não se alinhe ao seu planejamento.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question" onclick="toggleFaq(this)">
+            <span>Qual a média de valorização anual?</span>
+            <div class="faq-toggle">▼</div>
+          </div>
+          <div class="faq-answer">
+            <p>A valorização média do mercado imobiliário premium em Goiânia fica entre 8-12% ao ano, dependendo da região e tipo de empreendimento. Empreendimentos na planta costumam apreciar mais nos primeiros anos após o lançamento.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question" onclick="toggleFaq(this)">
+            <span>E se eu não tiver experiência com investimentos imobiliários?</span>
+            <div class="faq-toggle">▼</div>
+          </div>
+          <div class="faq-answer">
+            <p>Sem problema. Meu trabalho é justamente educar e guiar quem está começando. Explicarei cada etapa do processo, respondo todas as dúvidas e acompanho você do entendimento inicial até o fechamento.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question" onclick="toggleFaq(this)">
+            <span>Como recebo as oportunidades exclusivas?</span>
+            <div class="faq-toggle">▼</div>
+          </div>
+          <div class="faq-answer">
+            <p>Via WhatsApp. Compartilho plantas, renders, análises financeiras e condições especiais que você não encontra em corretoras convencionais. Respondo rapidamente e mantenho um atendimento personalizado e sem robô.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FORMULÁRIO EXPANDIDO -->
+  <section id="contato" class="py-20" style="background-color: var(--dark);">
+    <div class="max-w-3xl mx-auto px-4" style="background: rgba(27, 42, 74, 0.5); border: 1px solid rgba(196, 162, 101, 0.2);" class="rounded-2xl p-10 shadow-2xl fade-in">
+      <div class="rounded-2xl p-10">
+        <h2 style="font-family: 'Playfair Display', serif; font-size: 36px; font-weight: 700; text-center; margin-bottom: 8px;">Acesse as Oportunidades Exclusivas de Hoje</h2>
+        <p style="text-align: center; color: #ccc; margin-bottom: 24px;">
+          Preencha o formulário abaixo e receba as 3 melhores oportunidades imobiliárias do mercado premium direto no seu WhatsApp.
+        </p>
+        <form id="leadForm" class="space-y-4">
+          <input type="text" name="nome" placeholder="Nome completo" required
+                 style="background: rgba(196, 162, 101, 0.08); border: 1px solid rgba(196, 162, 101, 0.3); color: var(--offwhite);"
+                 class="w-full p-3 rounded-lg focus:outline-none focus:border-gold">
+          <input type="email" name="email" placeholder="E-mail (para enviar documentos)" required
+                 style="background: rgba(196, 162, 101, 0.08); border: 1px solid rgba(196, 162, 101, 0.3); color: var(--offwhite);"
+                 class="w-full p-3 rounded-lg focus:outline-none focus:border-gold">
+          <input type="tel" name="telefone" placeholder="WhatsApp (com DDD)" required
+                 style="background: rgba(196, 162, 101, 0.08); border: 1px solid rgba(196, 162, 101, 0.3); color: var(--offwhite);"
+                 class="w-full p-3 rounded-lg focus:outline-none focus:border-gold">
+          
+          <!-- NOVO: Qualificação -->
+          <select name="faixa_investimento" required
+                  style="background: rgba(196, 162, 101, 0.08); border: 1px solid rgba(196, 162, 101, 0.3); color: var(--offwhite);"
+                  class="w-full p-3 rounded-lg focus:outline-none focus:border-gold">
+            <option value="">Faixa de Investimento</option>
+            <option value="250k-500k">R$ 250 mil a R$ 500 mil</option>
+            <option value="500k-1m">R$ 500 mil a R$ 1 milhão</option>
+            <option value="1m-2m">R$ 1 milhão a R$ 2 milhões</option>
+            <option value="2m-acima">Acima de R$ 2 milhões</option>
+          </select>
+
+          <select name="experiencia" required
+                  style="background: rgba(196, 162, 101, 0.08); border: 1px solid rgba(196, 162, 101, 0.3); color: var(--offwhite);"
+                  class="w-full p-3 rounded-lg focus:outline-none focus:border-gold">
+            <option value="">Experiência com Investimentos Imobiliários</option>
+            <option value="primeira_vez">É meu primeiro investimento</option>
+            <option value="pouca">Tenho pouca experiência</option>
+            <option value="media">Tenho experiência média</option>
+            <option value="alta">Sou investidor experiente</option>
+          </select>
+
+          <select name="interesse" required
+                  style="background: rgba(196, 162, 101, 0.08); border: 1px solid rgba(196, 162, 101, 0.3); color: var(--offwhite);"
+                  class="w-full p-3 rounded-lg focus:outline-none focus:border-gold">
+            <option value="">Tipo de Interesse</option>
+            <option value="Empreendimento na planta">Empreendimento na planta</option>
+            <option value="Loteamento">Loteamento</option>
+            <option value="Empreendimento quase pronto">Empreendimento quase pronto</option>
+            <option value="Empreendimento pronto">Empreendimento pronto</option>
+            <option value="Todos">Todos (quero conhecer tudo)</option>
+          </select>
+
+          <select name="melhor_contato" required
+                  style="background: rgba(196, 162, 101, 0.08); border: 1px solid rgba(196, 162, 101, 0.3); color: var(--offwhite);"
+                  class="w-full p-3 rounded-lg focus:outline-none focus:border-gold">
+            <option value="">Melhor horário para contato</option>
+            <option value="Manhã (7h-12h)">Manhã (7h-12h)</option>
+            <option value="Tarde (12h-18h)">Tarde (12h-18h)</option>
+            <option value="Noite (18h-22h)">Noite (18h-22h)</option>
+            <option value="Sem preferência">Sem preferência</option>
+          </select>
+
+          <button type="submit"
+                  class="btn-primary w-full font-semibold py-3 rounded-lg transition"
+                  style="font-size: 16px;">
+            Quero Acessar as Oportunidades Exclusivas
+          </button>
+        </form>
+        <p id="msg" class="mt-4 text-center text-sm"></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- RODAPÉ -->
+  <footer class="py-8" style="background-color: var(--dark); border-top: 1px solid rgba(196, 162, 101, 0.2);">
+    <div class="max-w-6xl mx-auto px-4 flex flex-col md:flex-row items-center justify-between gap-4">
+      <p style="font-size: 13px; color: #999;">© 2025 • Almerindo Alves Neto — Consultor Imobiliário • CRECI 40410 • Goiânia / GO</p>
+      <a href="https://wa.me/5562920008623?text=Ol%C3%A1+Almerindo!+Gostaria+de+saber+mais+sobre+as+oportunidades+de+investimento."
+         target="_blank"
+         style="background: rgba(37, 211, 102, 0.15); border: 1px solid rgba(37, 211, 102, 0.5);"
+         class="inline-flex items-center gap-2 text-green-300 px-4 py-2 rounded-lg text-sm">
+        💬 Falar no WhatsApp
+      </a>
+    </div>
+  </footer>
+
+  <!-- BOTÃO FLUTUANTE WHATSAPP + TOOLTIP -->
+  <a href="https://wa.me/5562920008623?text=Ol%C3%A1+Almerindo!+Gostaria+de+saber+mais+sobre+as+oportunidades+de+investimento."
+     class="whatsapp-float" target="_blank" aria-label="Falar no WhatsApp">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" fill="white" width="28" height="28">
+      <path d="M16.04 2C8.42 2 2.25 8.18 2.25 15.8c0 2.76.76 5.43 2.19 7.75L2 30l6.65-2.07c2.21 1.2 4.73 1.82 7.39 1.82 7.62 0 13.79-6.17 13.79-13.79S23.66 2 16.04 2zm7.95 20.34c-.34.94-1.96 1.81-2.77 1.87-.72.05-1.63.08-2.64-.16-.6-.14-1.37-.44-2.36-.9-4.15-1.96-6.84-5.84-7.05-6.1-.2-.27-1.68-2.23-1.68-4.26s1.07-3.03 1.45-3.44c.38-.41.83-.52 1.1-.52h.8c.25 0 .6-.1.94.72.34.82 1.2 2.83 1.3 3.03.1.2.17.44.03.7-.13.27-.2.43-.4.66-.2.23-.43.52-.61.7-.2.18-.4.38-.17.76.24.38 1.07 1.77 2.3 2.86 1.58 1.41 2.91 1.84 3.3 2.04.4.2.63.17.87-.1.23-.27.98-1.15 1.24-1.55.25-.4.52-.34.87-.2.34.14 2.18 1.03 2.55 1.22.38.2.63.29.72.44.09.15.09.88-.26 1.82z"/>
+    </svg>
+  </a>
+  <div class="whatsapp-tooltip">Falar com Almerindo no WhatsApp 📱</div>
+
+  <!-- JS -->
+  <script>
+    const form = document.getElementById('leadForm');
+    const msg = document.getElementById('msg');
+
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      msg.textContent = 'Enviando...';
+
+      try {
+        const response = await fetch('https://script.google.com/macros/s/AKfycbzHI6hVAgW67ePbwSPDaenTp2w1Y5UQpjGGg_8paR1KjEY_WjkIGSqSKN2MKx6TpLgK/exec?gid=0', {
+          method: 'POST',
+          body: new FormData(form)
+        });
+
+        if (response.ok) {
+          msg.textContent = '✅ Recebido! Vou te chamar no WhatsApp em breve.';
+          form.reset();
+        } else {
+          msg.textContent = '❌ Erro ao enviar. Verifique o Apps Script.';
+        }
+      } catch (err) {
+        console.error(err);
+        msg.textContent = '❌ Erro ao enviar. Verifique o Apps Script.';
+      }
+    });
+
+    // animação on scroll
+    const faders = document.querySelectorAll('.fade-in');
+    const observer = new IntersectionObserver((entries, obs) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          obs.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.2 });
+    faders.forEach(f => observer.observe(f));
+
+    // FAQ toggle
+    function toggleFaq(element) {
+      const answer = element.nextElementSibling;
+      const toggle = element.querySelector('.faq-toggle');
+      
+      answer.classList.toggle('active');
+      toggle.classList.toggle('active');
+    }
+  </script>
+
+</body>
+</html>
