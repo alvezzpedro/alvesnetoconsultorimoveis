@@ -412,6 +412,30 @@
     }
     .wa-float:hover { transform: scale(1.08); }
 
+    /* IG FLOAT */
+    .ig-float {
+      position: fixed; bottom: 96px; right: 24px;
+      width: 56px; height: 56px;
+      background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+      border-radius: 50%; display: flex; align-items: center;
+      justify-content: center; z-index: 200;
+      box-shadow: 0 4px 20px rgba(214,36,159,0.35);
+      transition: transform .2s;
+    }
+    .ig-float:hover { transform: scale(1.08); }
+
+    /* IG SECTION BTN */
+    .ig-section-btn {
+      display: inline-flex; align-items: center; gap: 12px;
+      background: linear-gradient(135deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+      color: var(--white); font-size: 12px; font-weight: 700;
+      letter-spacing: 1.5px; text-transform: uppercase;
+      padding: 16px 32px; text-decoration: none;
+      transition: opacity .2s; margin-top: 16px;
+    }
+    .ig-section-btn:hover { opacity: 0.88; }
+    .ig-section-btn svg { flex-shrink: 0; }
+
     /* REVEAL */
     .reveal { opacity: 0; transform: translateY(24px); transition: opacity .7s ease, transform .7s ease; }
     .reveal.visible { opacity: 1; transform: translateY(0); }
@@ -476,7 +500,12 @@
       <li><a href="#sobre">Sobre</a></li>
       <li><a href="#faq">FAQ</a></li>
     </ul>
-    <a href="https://wa.me/5562996819289?text=Ol%C3%A1+Almerindo!+Gostaria+de+saber+mais+sobre+as+oportunidades+de+investimento." target="_blank" class="nav-cta">Falar no WhatsApp</a>
+    <div style="display:flex; align-items:center; gap:12px;">
+      <a href="https://www.instagram.com/almerindo_neto_corretor_imovel?igsh=MTNzYW0zOW1seHpldw==" target="_blank" aria-label="Instagram" style="display:flex; align-items:center; justify-content:center; width:38px; height:38px; border-radius:50%; background:linear-gradient(135deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888); transition:opacity .2s;" onmouseover="this.style.opacity='.8'" onmouseout="this.style.opacity='1'">
+        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="white" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+      </a>
+      <a href="https://wa.me/5562996819289?text=Ol%C3%A1+Almerindo!+Gostaria+de+saber+mais+sobre+as+oportunidades+de+investimento." target="_blank" class="nav-cta">Falar no WhatsApp</a>
+    </div>
   </div>
 </nav>
 
@@ -702,10 +731,16 @@
         <p class="sobre-text">Trabalhando ao lado das principais incorporadoras e construtoras, tenho acesso antecipado a produtos e condições diferenciadas, permitindo que você invista antes do mercado geral.</p>
         <p class="sobre-creci">CRECI <span>40410</span> &middot; Goiânia – GO</p>
         <a href="https://wa.me/5562996819289?text=Ol%C3%A1+Almerindo!+Gostaria+de+saber+mais+sobre+as+oportunidades+de+investimento." target="_blank" class="btn-primary">Falar com Almerindo</a>
-        <a href="https://wa.me/5562996819289?text=Ol%C3%A1+Almerindo!+Quero+agendar+uma+conversa+sobre+investimentos." target="_blank" class="wa-section-btn" style="margin-top: 16px;">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" fill="white" width="18" height="18"><path d="M16.04 2C8.42 2 2.25 8.18 2.25 15.8c0 2.76.76 5.43 2.19 7.75L2 30l6.65-2.07c2.21 1.2 4.73 1.82 7.39 1.82 7.62 0 13.79-6.17 13.79-13.79S23.66 2 16.04 2zm7.95 20.34c-.34.94-1.96 1.81-2.77 1.87-.72.05-1.63.08-2.64-.16-.6-.14-1.37-.44-2.36-.9-4.15-1.96-6.84-5.84-7.05-6.1-.2-.27-1.68-2.23-1.68-4.26s1.07-3.03 1.45-3.44c.38-.41.83-.52 1.1-.52h.8c.25 0 .6-.1.94.72.34.82 1.2 2.83 1.3 3.03.1.2.17.44.03.7-.13.27-.2.43-.4.66-.2.23-.43.52-.61.7-.2.18-.4.38-.17.76.24.38 1.07 1.77 2.3 2.86 1.58 1.41 2.91 1.84 3.3 2.04.4.2.63.17.87-.1.23-.27.98-1.15 1.24-1.55.25-.4.52-.34.87-.2.34.14 2.18 1.03 2.55 1.22.38.2.63.29.72.44.09.15.09.88-.26 1.82z"/></svg>
-          Agendar conversa pelo WhatsApp
-        </a>
+        <div style="display:flex; flex-wrap:wrap; gap:12px; margin-top:16px;">
+          <a href="https://wa.me/5562996819289?text=Ol%C3%A1+Almerindo!+Quero+agendar+uma+conversa+sobre+investimentos." target="_blank" class="wa-section-btn" style="margin-top:0;">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" fill="white" width="18" height="18"><path d="M16.04 2C8.42 2 2.25 8.18 2.25 15.8c0 2.76.76 5.43 2.19 7.75L2 30l6.65-2.07c2.21 1.2 4.73 1.82 7.39 1.82 7.62 0 13.79-6.17 13.79-13.79S23.66 2 16.04 2zm7.95 20.34c-.34.94-1.96 1.81-2.77 1.87-.72.05-1.63.08-2.64-.16-.6-.14-1.37-.44-2.36-.9-4.15-1.96-6.84-5.84-7.05-6.1-.2-.27-1.68-2.23-1.68-4.26s1.07-3.03 1.45-3.44c.38-.41.83-.52 1.1-.52h.8c.25 0 .6-.1.94.72.34.82 1.2 2.83 1.3 3.03.1.2.17.44.03.7-.13.27-.2.43-.4.66-.2.23-.43.52-.61.7-.2.18-.4.38-.17.76.24.38 1.07 1.77 2.3 2.86 1.58 1.41 2.91 1.84 3.3 2.04.4.2.63.17.87-.1.23-.27.98-1.15 1.24-1.55.25-.4.52-.34.87-.2.34.14 2.18 1.03 2.55 1.22.38.2.63.29.72.44.09.15.09.88-.26 1.82z"/></svg>
+            WhatsApp
+          </a>
+          <a href="https://www.instagram.com/almerindo_neto_corretor_imovel?igsh=MTNzYW0zOW1seHpldw==" target="_blank" class="ig-section-btn">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="white" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+            Instagram
+          </a>
+        </div>
       </div>
     </div>
   </div>
@@ -840,9 +875,17 @@
   <div class="footer-inner">
     <span class="footer-brand">Alves Neto</span>
     <p class="footer-copy">&copy; 2025 &middot; Almerindo Alves Neto &middot; CRECI 40410 &middot; Goiânia – GO</p>
-    <a class="footer-wa" href="https://wa.me/5562996819289?text=Ol%C3%A1+Almerindo!+Gostaria+de+saber+mais+sobre+as+oportunidades+de+investimento." target="_blank">WhatsApp &rarr;</a>
+    <div style="display:flex; align-items:center; gap:20px;">
+      <a href="https://www.instagram.com/almerindo_neto_corretor_imovel?igsh=MTNzYW0zOW1seHpldw==" target="_blank" style="font-size:11px; font-weight:600; letter-spacing:2px; text-transform:uppercase; color:var(--gold); text-decoration:none; opacity:.8; transition:opacity .2s;" onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='.8'">Instagram &rarr;</a>
+      <a class="footer-wa" href="https://wa.me/5562996819289?text=Ol%C3%A1+Almerindo!+Gostaria+de+saber+mais+sobre+as+oportunidades+de+investimento." target="_blank">WhatsApp &rarr;</a>
+    </div>
   </div>
 </footer>
+
+<!-- IG FLOAT -->
+<a href="https://www.instagram.com/almerindo_neto_corretor_imovel?igsh=MTNzYW0zOW1seHpldw==" class="ig-float" target="_blank" aria-label="Instagram">
+  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="white" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+</a>
 
 <!-- WA FLOAT -->
 <a href="https://wa.me/5562996819289?text=Ol%C3%A1+Almerindo!+Gostaria+de+saber+mais+sobre+as+oportunidades+de+investimento." class="wa-float" target="_blank" aria-label="Falar no WhatsApp">
