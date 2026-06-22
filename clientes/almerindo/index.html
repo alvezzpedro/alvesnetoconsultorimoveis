@@ -35,7 +35,7 @@
 
     /* NAV */
     nav {
-      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      position: fixed; top: 38px; left: 0; right: 0; z-index: 100;
       background: var(--offwhite);
       border-bottom: 1px solid rgba(196,162,101,0.25);
       transition: box-shadow .3s;
@@ -58,10 +58,10 @@
     .nav-links { display: flex; gap: 20px; list-style: none; }
     .nav-links a {
       font-size: 10px; font-weight: 500; letter-spacing: 1.5px;
-      text-transform: uppercase; color: var(--dark); text-decoration: none;
+      text-transform: uppercase; color: var(--gold); text-decoration: none;
       transition: color .2s; white-space: nowrap;
     }
-    .nav-links a:hover { color: var(--gold); }
+    .nav-links a:hover { color: var(--navy); }
     .nav-cta {
       background: var(--navy); color: var(--white);
       font-size: 11px; font-weight: 600; letter-spacing: 1.5px;
@@ -74,7 +74,7 @@
     /* HERO */
     .hero {
       min-height: 100vh; display: grid;
-      grid-template-columns: 1fr 1fr; padding-top: 96px;
+      grid-template-columns: 1fr 1fr; padding-top: 134px;
     }
     .hero-content {
       display: flex; flex-direction: column; justify-content: center;
@@ -442,6 +442,39 @@
     .ig-section-btn:hover { opacity: 0.88; }
     .ig-section-btn svg { flex-shrink: 0; }
 
+    /* URGENCY BAR */
+    .urgency-bar {
+      background: var(--gold); color: var(--dark);
+      text-align: center; padding: 10px 24px;
+      font-size: 11px; font-weight: 600; letter-spacing: 1.5px;
+      text-transform: uppercase; position: relative; z-index: 101;
+      transition: top .3s ease;
+    }
+    .urgency-bar span { opacity: 0.7; margin: 0 10px; }
+
+    /* URGENCY TAG */
+    .urgency-tag {
+      display: inline-flex; align-items: center; gap: 6px;
+      background: rgba(196,162,101,0.12); border: 1px solid rgba(196,162,101,0.4);
+      color: var(--gold); font-size: 9px; font-weight: 700;
+      letter-spacing: 1.5px; text-transform: uppercase;
+      padding: 4px 10px; margin-bottom: 10px;
+    }
+    .urgency-dot {
+      width: 5px; height: 5px; background: var(--gold);
+      border-radius: 50%; animation: pulse 1.5s infinite;
+    }
+    @keyframes pulse {
+      0%, 100% { opacity: 1; } 50% { opacity: 0.3; }
+    }
+
+    /* FORM LIMIT NOTE */
+    .form-limit {
+      font-size: 11px; color: rgba(255,255,255,0.4);
+      text-align: center; margin-top: 10px; letter-spacing: 0.5px;
+    }
+    .form-limit strong { color: var(--gold); }
+
     /* REVEAL */
     .reveal { opacity: 0; transform: translateY(24px); transition: opacity .7s ease, transform .7s ease; }
     .reveal.visible { opacity: 1; transform: translateY(0); }
@@ -496,11 +529,16 @@
 </head>
 <body>
 
+<!-- URGENCY BAR -->
+<div class="urgency-bar">
+  Pré-lançamentos com condições especiais<span>&middot;</span>Unidades reservadas se esgotam antes do lançamento público
+</div>
+
 <!-- NAV -->
 <nav id="nav">
   <div class="nav-inner">
-    <a href="#inicio" style="display:block; line-height:0;">
-      <img src="logo.png" alt="Alves Neto Consultoria Imobiliária" style="height: 88px; width: auto; display: block; max-width: 280px; object-fit: contain; object-position: center;">
+    <a href="#inicio" style="display:block; line-height:0; align-self: flex-end;">
+      <img src="logo.png" alt="Alves Neto Consultoria Imobiliária" style="height: 110px; width: auto; display: block; max-width: 320px; object-fit: contain; object-position: center;">
     </a>
     <ul class="nav-links">
       <li><a href="#inicio">Início</a></li>
@@ -617,6 +655,7 @@
         <img class="oport-img" src="imagehype.jpeg" alt="Hype Vaca Brava">
         <div class="oport-body">
           <span class="oport-tag">Pré-lançamento exclusivo</span>
+          <div class="urgency-tag"><span class="urgency-dot"></span>Unidades se esgotando</div>
           <h3 class="oport-name">Hype Vaca Brava</h3>
           <p class="oport-loc">Vaca Brava &middot; Goiânia</p>
           <p class="oport-desc">Alto padrão ao lado do parque e do Goiânia Shopping, em uma das regiões mais valorizadas e com maior demanda da cidade.</p>
@@ -627,6 +666,7 @@
         <img class="oport-img" src="b1.png" alt="Opus Altana">
         <div class="oport-body">
           <span class="oport-tag">Pré-lançamento exclusivo</span>
+          <div class="urgency-tag"><span class="urgency-dot"></span>Reservas abertas por tempo limitado</div>
           <h3 class="oport-name">Opus Altana</h3>
           <p class="oport-loc">GO-020 &middot; Área Flamboyant</p>
           <p class="oport-desc">Condomínio horizontal de altíssimo padrão com lazer completo e localização estratégica na área de maior crescimento da capital.</p>
@@ -637,6 +677,7 @@
         <img class="oport-img" src="a6.jpeg" alt="OBLÍQ Consciente">
         <div class="oport-body">
           <span class="oport-tag">Pré-lançamento exclusivo</span>
+          <div class="urgency-tag"><span class="urgency-dot"></span>Condições encerram no lançamento</div>
           <h3 class="oport-name">OBLÍQ Consciente</h3>
           <p class="oport-loc">Setor Bueno &middot; Goiânia</p>
           <p class="oport-desc">Torre sofisticada com lazer elevado no 16º pavimento, jardim secreto e vista para o eixo mais valorizado de Goiânia.</p>
@@ -808,8 +849,8 @@
   <div class="section-inner">
     <div class="form-wrap reveal">
       <div class="form-info">
-        <h2 class="form-info-title">Acesse as oportunidades exclusivas de hoje</h2>
-        <p class="form-info-text">Preencha ao lado e receba as melhores oportunidades do mercado premium direto no seu WhatsApp. Análise de perfil sem compromisso.</p>
+        <h2 class="form-info-title">Garanta seu acesso antes do lançamento público</h2>
+        <p class="form-info-text">Os preços de pré-lançamento encerram assim que as unidades reservadas se esgotam. Preencha ao lado e receba análise personalizada no seu WhatsApp — sem compromisso.</p>
         <div class="form-promise">
           <div class="form-promise-item"><span class="form-promise-dot"></span>Material oficial, plantas e condições direto da fonte</div>
           <div class="form-promise-item"><span class="form-promise-dot"></span>Atendimento personalizado — sem robô, sem script</div>
@@ -872,8 +913,9 @@
               <option value="Sem preferência">Sem preferência</option>
             </select>
           </div>
-          <button type="submit" class="form-submit">Quero acessar as oportunidades</button>
+          <button type="submit" class="form-submit">Garantir minha análise gratuita agora</button>
           <p class="form-msg" id="formMsg"></p>
+          <p class="form-limit">Almerindo atende um número <strong>limitado de clientes por mês</strong> para manter atendimento 100% pessoal.</p>
         </form>
       </div>
     </div>
@@ -883,7 +925,10 @@
 <!-- FOOTER -->
 <footer>
   <div class="footer-inner">
-    <img src="logo.png" alt="Alves Neto Consultoria Imobiliária" style="height: 44px; width: auto; display: block; filter: brightness(0) invert(1); opacity: 0.85;">
+    <div style="display:flex; flex-direction:column; line-height:1.25;">
+      <span style="font-family:'Playfair Display',serif; font-size:15px; font-weight:700; letter-spacing:4px; color:var(--white); text-transform:uppercase;">Alves Neto</span>
+      <span style="font-size:8px; font-weight:300; letter-spacing:3px; color:var(--gold); text-transform:uppercase; margin-top:3px;">Consultoria Imobiliária</span>
+    </div>
     <p class="footer-copy">&copy; 2025 &middot; Almerindo Alves Neto &middot; CRECI 40410 &middot; Goiânia – GO</p>
     <div style="display:flex; align-items:center; gap:20px;">
       <a href="https://www.instagram.com/almerindo_neto_corretor_imovel?igsh=MTNzYW0zOW1seHpldw==" target="_blank" style="font-size:11px; font-weight:600; letter-spacing:2px; text-transform:uppercase; color:var(--gold); text-decoration:none; opacity:.8; transition:opacity .2s;" onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='.8'">Instagram &rarr;</a>
@@ -905,9 +950,21 @@
 </a>
 
 <script>
-  // Nav scroll shadow
+  // Nav scroll — hide urgency bar and move nav to top on scroll
   const nav = document.getElementById('nav');
-  window.addEventListener('scroll', () => nav.classList.toggle('scrolled', window.scrollY > 20));
+  const urgencyBar = document.querySelector('.urgency-bar');
+  window.addEventListener('scroll', () => {
+    nav.classList.toggle('scrolled', window.scrollY > 20);
+    if (window.scrollY > 60) {
+      nav.style.top = '0';
+      urgencyBar.style.position = 'fixed';
+      urgencyBar.style.top = '-40px';
+    } else {
+      nav.style.top = '38px';
+      urgencyBar.style.position = 'relative';
+      urgencyBar.style.top = '0';
+    }
+  });
 
   // Scroll reveal
   const revealObserver = new IntersectionObserver((entries) => {
@@ -935,15 +992,13 @@
     e.preventDefault();
     formMsg.textContent = 'Enviando...';
     try {
-      const res = await fetch('https://script.google.com/macros/s/AKfycbzHI6hVAgW67ePbwSPDaenTp2w1Y5UQpjGGg_8paR1KjEY_WjkIGSqSKN2MKx6TpLgK/exec?gid=0', {
-        method: 'POST', body: new FormData(form)
+      await fetch('https://script.google.com/macros/s/AKfycbyQbfesnIQibd0ItM5tXJK8DnEDw7Dqv7QhK4YSaKYTz7WaiEXRZ9a2dpXsdV546r8x3Q/exec', {
+        method: 'POST',
+        body: new URLSearchParams(new FormData(form)),
+        mode: 'no-cors'
       });
-      if (res.ok) {
-        formMsg.textContent = 'Recebido. Almerindo vai entrar em contato em breve.';
-        form.reset();
-      } else {
-        formMsg.textContent = 'Erro ao enviar. Tente novamente.';
-      }
+      formMsg.textContent = 'Recebido. Almerindo vai entrar em contato em breve.';
+      form.reset();
     } catch {
       formMsg.textContent = 'Erro ao enviar. Tente novamente.';
     }
